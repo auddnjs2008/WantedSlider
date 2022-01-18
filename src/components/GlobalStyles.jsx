@@ -10,6 +10,10 @@ const reset = css`
     text-decoration: none;
     color: black;
   }
+  button {
+    border: 0;
+    background: none;
+  }
 
   li {
     list-style: none;

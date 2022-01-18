@@ -1,3 +1,6 @@
+import { faBell } from "@fortawesome/free-regular-svg-icons";
+import { faEllipsisH, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, MainBar, Menu, Aside } from "./styles";
@@ -19,7 +22,7 @@ const NavBar = () => {
             </div>
           </MainBar>
           <Menu>
-            <li>
+            <li className="home">
               <Link to="/">홈</Link>
             </li>
             <li>
@@ -28,13 +31,13 @@ const NavBar = () => {
             <li>
               <Link to="/">이벤트</Link>
             </li>
-            <li>
+            <li className="salary">
               <Link to="/">직군별 연봉</Link>
             </li>
-            <li>
+            <li className="resume">
               <Link to="/">이력서</Link>
             </li>
-            <li>
+            <li className="community">
               <Link to="/">
                 커뮤니티
                 <em>
@@ -46,10 +49,10 @@ const NavBar = () => {
                   >
                     <g
                       fill="none"
-                      fill-rule="evenodd"
-                      font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo"
-                      font-size="9"
-                      font-weight="500"
+                      fillRule="evenodd"
+                      fontFamily="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo"
+                      fontSize="7"
+                      fontWeight="500"
                     >
                       <g fill="#36F">
                         <g>
@@ -75,10 +78,10 @@ const NavBar = () => {
                 </em>
               </Link>
             </li>
-            <li>
+            <li className="freelancer">
               <Link to="/">프리랜서</Link>
             </li>
-            <li>
+            <li className="prediction">
               <Link to="/">
                 AI 합격예측
                 <span>
@@ -90,10 +93,10 @@ const NavBar = () => {
                   >
                     <g
                       fill="none"
-                      fill-rule="evenodd"
-                      font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo"
-                      font-size="9"
-                      font-weight="500"
+                      fillRule="evenodd"
+                      fontFamily="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo"
+                      fontSize="7"
+                      fontWeight="500"
                     >
                       <g fill="#36F">
                         <g>
@@ -122,12 +125,30 @@ const NavBar = () => {
           </Menu>
           <Aside>
             <li>
-              <button></button>
+              <button>
+                <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
+              </button>
             </li>
-            <li>알림모양</li>
-            <li>프로필 모양</li>
-            <li>기업 서비스</li>
-            <li>추가 메뉴</li>
+            <li>
+              <button>
+                <FontAwesomeIcon icon={faBell}></FontAwesomeIcon>
+              </button>
+            </li>
+            <li className="profileBox">
+              <button>
+                <div className="avatarBorder">
+                  <div className="avatarImage"></div>
+                </div>
+              </button>
+            </li>
+            <li className="dashboardButton">
+              <a>기업 서비스</a>
+            </li>
+            <li className="additionalMenu">
+              <button>
+                <FontAwesomeIcon icon={faEllipsisH}></FontAwesomeIcon>
+              </button>
+            </li>
           </Aside>
         </nav>
       </div>

@@ -1,11 +1,17 @@
 import React from "react";
 import NavBar from "../../components/NavBar";
+import TopBanner from "../../components/TopBanner";
+import { Container } from "./styles";
 
 const Home = () => {
   return (
-    <div>
+    <Container>
       <NavBar></NavBar>
-    </div>
+      <div className="fixHeight"></div>
+      <section>
+        <TopBanner></TopBanner>
+      </section>
+    </Container>
   );
 };
 
