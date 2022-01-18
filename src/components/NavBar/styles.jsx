@@ -257,11 +257,16 @@ export const Aside = styled.aside`
   }
 
   li.profileBox {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
     button {
       height: 32px;
       display: flex;
       align-items: center;
     }
+
     .avatarBorder {
       width: 32px;
       height: 32px;
@@ -283,6 +288,7 @@ export const Aside = styled.aside`
         background-position: 50%;
       }
     }
+
     @media (max-width: 991px) {
       display: none;
     }

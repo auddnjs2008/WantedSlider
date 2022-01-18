@@ -3,6 +3,7 @@ import { faEllipsisH, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
+import Badge from "../Badge";
 import { Container, MainBar, Menu, Aside } from "./styles";
 
 const NavBar = () => {
@@ -133,6 +134,7 @@ const NavBar = () => {
               <button>
                 <FontAwesomeIcon icon={faBell}></FontAwesomeIcon>
               </button>
+              <Badge top={-5} left={15}></Badge>
             </li>
             <li className="profileBox">
               <button>
@@ -140,6 +142,7 @@ const NavBar = () => {
                   <div className="avatarImage"></div>
                 </div>
               </button>
+              <Badge top={-1} left={28}></Badge>
             </li>
             <li className="dashboardButton">
               <a>기업 서비스</a>
